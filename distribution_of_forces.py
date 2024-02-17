@@ -14,8 +14,7 @@ st.markdown("""<style>
 [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {width: 500px;}
 [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {width: 500px;margin-left: -500px;}
 footer:after{
-    content:"Berliner Hochschule für Technik (BHT) | Konstruktiver Hoch- und Ingenieurbau (M.Eng.) | \
-    Ingenieurholzbau | Prof. Dr. Jens Kickler | Cal Mense 914553";
+    content:"Cal Mense M.Eng.";
     display:block;
     position:relative;
     color:grey;
@@ -236,13 +235,24 @@ for n,i in enumerate(combined_lists):
     fig.add_annotation(
             x=x,
             y=y + 2 * diameter,
-            text=f'{Fx}={shear}',
+            text=f'{Fx}={shearXYi}',
             showarrow=False,
             arrowhead=2,
             arrowsize=1)
     
-    fig.add_trace(go.Scatter(x=[x+shearXi*200, x], y=[y+shearYi*200, y],
-            marker= dict(size=10,symbol= "arrow-bar-up", angleref="previous", color = "black")))
+    fig.add_annotation(
+            xref="x", yref="y",
+            x = x,
+            y = y,
+            axref="x", ayref='y',
+            ax = x + min(shearXi*500,200),
+            ay = y + shearYi*500,
+            showarrow=True,
+            arrowhead=1,
+            arrowsize=1)
+    
+    #fig.add_trace(go.Scatter(x=[x+shearXi*200, x], y=[y+shearYi*200, y],
+     #       marker= dict(size=[10], symbol= "arrow-bar-up", angleref="previous", color = "black")))
 
     #st.write("name="+str(fastenerList[n].name))
     #st.write("rx="+str(fastenerList[n].rx))
