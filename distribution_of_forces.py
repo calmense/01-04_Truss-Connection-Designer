@@ -8,8 +8,6 @@ from itertools import product
 from collections import defaultdict
 from distribution_of_forces_functions import *
 
-
-
 # HTML Einstellungen
 st.set_page_config(page_title="Bolt Group Forces", layout="wide")
 st.markdown("""<style>
@@ -90,7 +88,6 @@ with st.sidebar:
         forceShear = int(st.slider("Shear Force (kN)", 1,200, step = 10))
     with col2:
         xPosition = int(st.slider("Eccentricity (mm)", -timberWidth, timberWidth, 10, step = 10))
-
 
 # ____________________calculation___________________________________
 # __________________________________________________________________
@@ -367,7 +364,7 @@ try:
             xaxis=dict(scaleanchor="y", scaleratio=1,fixedrange=True, visible=False),
             yaxis=dict(scaleanchor="x", scaleratio=1, fixedrange=True, visible=False),
             uirevision='static',
-            plot_bgcolor = "white")  # Disable zoom functionality
+            plot_bgcolor = rgba(0,0,0,0))  # Disable zoom functionality
 
         # Hide the axis
         fig.update_xaxes(showline=False, showgrid=False, zeroline=False)
@@ -378,6 +375,7 @@ try:
     # Table
     with col2:
 
+        st.write("")
         st.write("")
         st.write("")
         st.write("")
@@ -397,7 +395,7 @@ try:
 
         # Create figure
         table = go.Figure(data=[table_trace])
-        table.update_layout(width = 700, height = timberHeight + 300)
+        table.update_layout(width = 700, height = timberHeight + 300, fill_color = rgba(0,0,0,0))
         st.write(table)
 
     # __________________________Report__________________________________
