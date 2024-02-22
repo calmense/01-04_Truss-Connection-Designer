@@ -11,7 +11,7 @@ from distribution_of_forces_functions import *
 
 
 # HTML Einstellungen
-st.set_page_config(layout="wide")
+st.set_page_config(page_title="Bolt Group Forces", layout="wide")
 st.markdown("""<style>
 [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {width: 500px;}
 [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {width: 500px;margin-left: -500px;}
@@ -357,7 +357,7 @@ try:
 
         fig.update_layout(
             autosize=False,
-            width=timberWidth + 400,
+            width=timberWidth + 500,
             height=timberHeight + 300,
             uirevision='static',  # Disable zoom functionality
             showlegend=False)
