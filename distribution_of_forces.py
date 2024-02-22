@@ -284,15 +284,15 @@ try:
         fig.add_trace(go_scatter)
 
         # Moment text
-        go_scatter = plotly_go_scatter_text([timberWidth + 50], [timberHeight / 2 + 30], f"Mc = {M_cz/ 1000} kNm", None, 20, "black", "middle right")
+        go_scatter = plotly_go_scatter_text([timberWidth + 50], [timberHeight / 2 + 30], f"Mc = {M_cz/ 1000} kNm", None, 15, "black", "middle right")
         fig.add_trace(go_scatter)
 
         # Resultant text
-        go_scatter = plotly_go_scatter_text([timberWidth + 50], [timberHeight / 2 - 0], f"R = {round(totalShearXY,2)} kN", None, 20, "black", "middle right")
+        go_scatter = plotly_go_scatter_text([timberWidth + 50], [timberHeight / 2 - 0], f"R = {round(totalShearXY,2)} kN", None, 15, "black", "middle right")
         fig.add_trace(go_scatter)
 
         # theta text
-        go_scatter = plotly_go_scatter_text([timberWidth + 50], [timberHeight / 2 - 30], f"θ = {round(theta * 180 / pi,1)} °", None, 20, "black", "middle right")
+        go_scatter = plotly_go_scatter_text([timberWidth + 50], [timberHeight / 2 - 30], f"θ = {round(theta * 180 / pi,1)} °", None, 15, "black", "middle right")
         fig.add_trace(go_scatter)
                 
         # Force arrow
@@ -349,7 +349,7 @@ try:
             xxx = 1
 
         # Force arrow text
-        go_scatter = plotly_go_scatter_text([xPosition + timberWidth / 2], [y + 80], f'{forceShear}kN', None, None, "black", "top center")
+        go_scatter = plotly_go_scatter_text([xPosition + timberWidth / 2], [y + 80], f'{forceShear}kN', None, 15, "black", "top center")
         fig.add_trace(go_scatter)
 
         fig.update_layout(
