@@ -357,7 +357,7 @@ try:
 
         fig.update_layout(
             autosize=False,
-            width=timberWidth + 300,
+            width=timberWidth + 400,
             height=timberHeight + 300,
             uirevision='static',  # Disable zoom functionality
             showlegend=False)
@@ -366,7 +366,8 @@ try:
         fig.update_layout(
             xaxis=dict(scaleanchor="y", scaleratio=1,fixedrange=True, visible=False),
             yaxis=dict(scaleanchor="x", scaleratio=1, fixedrange=True, visible=False),
-            uirevision='static')  # Disable zoom functionality
+            uirevision='static',
+            plot_bgcolor = "white")  # Disable zoom functionality
 
         # Hide the axis
         fig.update_xaxes(showline=False, showgrid=False, zeroline=False)
@@ -381,7 +382,6 @@ try:
         st.write("")
         st.write("")
         st.write("")
-
 
         headerList = [key for key in fastenerDict.keys()]
         valuesList = [value for value in fastenerDict.values()]
