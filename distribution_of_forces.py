@@ -87,12 +87,10 @@ with st.sidebar:
     st.markdown(header, unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:  
-        forceShear = int(st.slider("Shear Force (kN)", 0,200, step = 10))
+        forceShear = int(st.slider("Shear Force (kN)", 1,200, step = 10))
     with col2:
         xPosition = int(st.slider("Eccentricity (mm)", -timberWidth, timberWidth, 10, step = 10))
-    col1, col2 = st.columns(2)
-    with col1:
-        axialForce = int(st.slider("Axial Force (kN)", 1,10))
+
 
 # ____________________calculation___________________________________
 # __________________________________________________________________
