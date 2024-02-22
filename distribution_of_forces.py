@@ -363,8 +363,8 @@ try:
         fig.update_layout(
             xaxis=dict(scaleanchor="y", scaleratio=1,fixedrange=True, visible=False),
             yaxis=dict(scaleanchor="x", scaleratio=1, fixedrange=True, visible=False),
-            uirevision='static',
-            plot_bgcolor = rgba(0,0,0,0))  # Disable zoom functionality
+            uirevision='static')  # Disable zoom functionality
+        fig.update_layout({"paper_bgcolor": "rgba(0, 0, 0, 0)","plot_bgcolor": "rgba(0, 0, 0, 0)",})
 
         # Hide the axis
         fig.update_xaxes(showline=False, showgrid=False, zeroline=False)
@@ -395,7 +395,8 @@ try:
 
         # Create figure
         table = go.Figure(data=[table_trace])
-        table.update_layout(width = 700, height = timberHeight + 300, fill_color = rgba(0,0,0,0))
+        table.update_layout(width = 700, height = timberHeight + 300)
+        table.update_layout({"paper_bgcolor": "rgba(0, 0, 0, 0)","plot_bgcolor": "rgba(0, 0, 0, 0)",})
         st.write(table)
 
     # __________________________Report__________________________________
