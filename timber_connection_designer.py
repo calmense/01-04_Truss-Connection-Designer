@@ -19,7 +19,7 @@ from report import *
 
 
 # HTML Einstellungen
-st.set_page_config(page_title="Bolt Group Forces", layout="wide")
+st.set_page_config(page_title="Timber Connection Designer", layout="wide")
 st.markdown("""<style>
 [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {width: 500px;}
 [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {width: 500px;margin-left: -500px;}
