@@ -5,8 +5,6 @@ import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
 from itertools import product
-from st_circular_progress import CircularProgress
-from collections import defaultdict
 from functions_plotly import *
 from functions_distances import *
 from functions_material_properties import *
